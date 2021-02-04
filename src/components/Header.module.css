@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav{
+    display: flex;
+    margin-right: 5em;
+}
+ul.nav {
+    list-style: none;
+}
+
+.nav li{
+    margin-left:2em
+}
+
+.nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+img.logo {
+    height:80px;
+    padding: 15px;
+    margin-left:15px
+}
