@@ -7,13 +7,15 @@
 .nav{
     display: flex;
     margin-right: 5em;
+    align-items: center;
 }
 ul.nav {
     list-style: none;
 }
 
 .nav li{
-    margin-left:2em
+    margin-left:3em
+
 }
 
 .nav li a{

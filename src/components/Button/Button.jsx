@@ -12,7 +12,7 @@ const Button = ({ icon, text, link }) => {
     navigate(`/${link}`)
 } 
   return (
-    <div onClick={handelClick} className={classes.icon1}>
+    <div onClick={handelClick} className={classes.btnAct}>
       <div className={classes.icon}>
         <i className={`fa ${icon}`} aria-hidden="true"></i>
         {text}

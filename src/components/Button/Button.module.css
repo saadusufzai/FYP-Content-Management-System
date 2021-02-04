@@ -1,0 +1,13 @@
+.btnAct {
+  background: rgb(98, 98, 215);
+  background: linear-gradient(
+    90deg,
+    rgba(98, 98, 215, 1) 0%,
+    rgba(255, 143, 226, 1) 100%
+  );
+  padding: 10px 45px;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 2em;
+  cursor: pointer;
+}
