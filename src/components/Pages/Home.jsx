@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../Header'
+import Carousel from '../Carousel/Carousel'
 const Home = () => {
     return (
         <div>
-            Home Page
+            <Carousel/>
         </div>
     )
 }

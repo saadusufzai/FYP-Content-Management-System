@@ -1,0 +1,13 @@
+.imgs{
+    margin: 0 auto;
+}
+.intro{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.intro p{
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}

@@ -6,7 +6,7 @@ import classes from './Button.module.css'
 
 import {useNavigate} from 'react-router-dom'
 
-const Button = ({ icon, text, link }) => {
+const Button = ({ text, link }) => {
   const navigate = useNavigate()
   const handelClick = ()=>{
     navigate(`/${link}`)
@@ -14,7 +14,21 @@ const Button = ({ icon, text, link }) => {
   return (
     <div onClick={handelClick} className={classes.btnAct}>
       <div className={classes.icon}>
-        <i className={`fa ${icon}`} aria-hidden="true"></i>
+           {text}
+      </div>
+    </div>
+  );
+};
+
+export const Button2 = ({ text, link }) => {
+  const navigate = useNavigate()
+  const handelClick = ()=>{
+    navigate(`/${link}`)
+} 
+  return (
+    <div onClick={handelClick} className={classes.btn2}>
+      <div className={classes.icon}>
+        
         {text}
       </div>
     </div>
