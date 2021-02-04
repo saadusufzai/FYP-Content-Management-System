@@ -14,7 +14,7 @@ const Header = ()=> {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <Button text={'Doate'} link={'/donate'}/>
+                    <Button text={'Donate'} link={'/donate'}/>
                         
                 </ul>
             </div>

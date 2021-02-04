@@ -6,7 +6,7 @@ const Intro = ({heading}) => {
         <h1>{heading ? `${heading}` :'We Protect The Environment'}</h1>
         <p>A Non Profit Organization fighting for climate change </p>
         <Button text="Our Work" link="/gallery" />
-        <Button2 text="learn More" link="/about" />
+        <Button2 text="Learn More" link="/about" />
       </div>
     )
 }

@@ -5,4 +5,4 @@
 ### Dependencies
     React-Router V6
     History
-    Pure React Carousel
+    React Slik Carousel
