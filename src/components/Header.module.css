@@ -26,3 +26,10 @@ img.logo {
     padding: 15px;
     margin-left:15px
 }
+
+.btnAct{
+    background-color: #6362D7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+}
