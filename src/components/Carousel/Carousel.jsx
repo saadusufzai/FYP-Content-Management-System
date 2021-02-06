@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import classes from "./Carousel.module.css";
 
 
@@ -12,7 +11,7 @@ const Carousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,

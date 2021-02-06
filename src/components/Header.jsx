@@ -6,15 +6,18 @@ const Header = ()=> {
     return(
         <div className={classes.header}>
             <div className="logo">
-                <img className={classes.logo} src={logo} alt=""/>
+                <img className={classes.logo} src={logo} alt="logo-epo"/>
             </div>
-            <div className={classes.footer}>
+            <div>
                 <ul className={classes.nav}>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
+
                     <Button text={'Donate'} link={'/donate'}/>
+                    
                         
                 </ul>
             </div>
