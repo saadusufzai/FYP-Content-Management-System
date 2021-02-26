@@ -3,6 +3,7 @@ import Carousel from '../Carousel/Carousel'
 import Blogs from '../Blogs/Blogs'
 import Media from '../Gallery/Media'
 import Team from '../Team/Team'
+
 const Home = () => {
     return (
         <div>
@@ -10,6 +11,7 @@ const Home = () => {
             <Blogs/>
             <Media/>
             <Team/>
+   
         </div>
     )
 }

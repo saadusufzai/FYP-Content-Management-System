@@ -8,6 +8,7 @@ import Contact from './components/Pages/Contact';
 import Donate from './components/Pages/Donate';
 import Gallery from './components/Pages/Gallery';
 import Home from './components/Pages/Home';
+import Footer from './components/Footer/Footer' 
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/donate' element={<Donate/>} />
         </Routes>
+        <Footer/>
     </Router>
   )}
 

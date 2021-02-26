@@ -1,0 +1,21 @@
+.innerFooter{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    padding: 10px;
+
+}
+.footer{
+    margin-top: 20px;
+
+}
+
+.footer .innerFooter ul  {
+    list-style-type: none;
+}
+
+.footer .innerFooter ul a {
+    text-decoration: none;
+    color: #000;
+}
