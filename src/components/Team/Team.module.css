@@ -1,0 +1,30 @@
+.box{
+  width: 200px;
+    
+}
+
+.box .img{    
+    width: 200px;
+    border: 1px solid #000;
+}
+
+.boxes{
+    width: 90%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.boxes:nth-child(3){
+    margin-top: 55px;
+}
+
+
+.box .learnMore{
+    cursor: pointer;
+    color: yellowgreen;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9D60EB;
+    border-radius: 5px;
+}
