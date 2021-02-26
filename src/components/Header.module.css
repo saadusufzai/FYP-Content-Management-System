@@ -22,6 +22,9 @@ ul.nav {
     text-decoration: none;
     color: black;
 }
+.nav li a:hover{
+    color: plum;
+}
 
 img.logo {
     height:80px;
