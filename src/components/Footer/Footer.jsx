@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./Footer.module.css";
 
+import logo from '../../images/logo.jpg';
+
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import LanguageIcon from "@material-ui/icons/Language";
@@ -12,23 +14,24 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className={classes.footer}>
+      <img classname={classes.logo} src={logo} alt="epo logo"/>
       <div className={classes.innerFooter}>
         {/* Contact */}
-        <ul className={classes.feild}>
-          <h3>Contact Us</h3>
+        <ul className={classes.contact}>
+          <h5>Contact Us</h5>
           <li>
-            <PhoneIcon /> +92-333-6573418
+            <PhoneIcon fontSize='small' className={classes.icon} /> +92-333-6573418
           </li>
           <li>
-            <EmailIcon /> info@epo.org.pk
+            <EmailIcon fontSize='small' className={classes.icon} /> info@epo.org.pk
           </li>
           <li>
-            <LanguageIcon /> www.epo.org.pk
+            <LanguageIcon fontSize='small' className={classes.icon} /> www.epo.org.pk
           </li>
         </ul>
         {/* Links */}
         <ul className={classes.feild}>
-          <h3>Our Organization</h3>
+          <h5>Our Organization</h5>
           <li><Link to='/about'>About</Link> </li>
           <li><Link to='/gallery'>Gallery</Link> </li>
           <li><Link to='/blog'>Blog</Link> </li>
@@ -37,7 +40,7 @@ const Footer = () => {
         </ul>
         {/* Social Contacts */}
         <ul className={classes.feild}>
-          <h3>Contact Us</h3>
+          <h5>Contact Us</h5>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Twitter</a></li>
           <li><a href="#">YouTube</a></li>
@@ -46,13 +49,13 @@ const Footer = () => {
         </ul>
         {/* Address */}
         <ul style={{ width:'30%'}} className={classes.feild}>
-          <h3>Address</h3>
+          <h5>Address</h5>
           <li >
-             EPO Office, 2nd Floor Nasir Hospital, Bhakkar, Punjab Pakistan</li>
-             <h3>Follow Us</h3>
-             <FacebookIcon color="primary"/>
-             <TwitterIcon color="#1111"/>
-             <YouTubeIcon color="secondary"/>
+             Environmental Protection Organization (EPO) Office, 2nd Floor Nasir Hospital, Bhakkar, Punjab Pakistan</li>
+             <h5>Follow Us</h5>
+             <FacebookIcon className={classes.socialIcon} fontSize='large' color="primary"/>
+             <TwitterIcon className={classes.socialIcon} fontSize='large' color="#1111"/>
+             <YouTubeIcon className={classes.socialIcon} fontSize='large' color="secondary"/>
         </ul>
       </div>
     </div>
