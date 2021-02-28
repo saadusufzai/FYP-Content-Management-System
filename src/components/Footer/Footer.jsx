@@ -58,6 +58,9 @@ const Footer = () => {
              <YouTubeIcon className={classes.socialIcon} fontSize='large' color="secondary"/>
         </ul>
       </div>
+      <div className={classes.copyright}>
+          <div className={classes.text}>Copyright &copy;2020-2021 | All rights reserved by www.epo.org.pk</div>
+      </div>
     </div>
   );
 };
