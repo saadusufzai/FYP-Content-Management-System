@@ -17,16 +17,16 @@ const Team = () => {
       <div className={classes.boxes}>
           {/* team 1 */}
         <div className={classes.box}>
-          <img className={classes.img} src={img1} alt="Aslam Jaan" />
-          <Typography variant="h6" align="center">Aslam Jaan</Typography>
-          <Typography variant="body1" align="center">President</Typography>
+          <img className={classes.img} src={img2} alt="Dr Mazhar Naqvi" />
+          <Typography variant="h6" align="center">Dr.Mazhar Naqvi</Typography>
+          <Typography variant="body1" align="center">CEO</Typography>
           <div className={classes.learnMore}> Learn More</div>
         </div>
           {/* team 2 */}
         <div className={classes.box}>
-          <img className={classes.img} src={img2} alt="Dr Mazhar Naqvi" />
-          <Typography variant="h6" align="center">Dr.Mazhar Naqvi</Typography>
-          <Typography variant="body1" align="center">CEO</Typography>
+          <img className={classes.img} src={img1} alt="Aslam Jaan" />
+          <Typography variant="h6"  align="center">Aslam Jaan</Typography>
+          <Typography variant="body1" align="center">President</Typography>
           <div className={classes.learnMore}> Learn More</div>
         </div>
           {/* team 3 */}

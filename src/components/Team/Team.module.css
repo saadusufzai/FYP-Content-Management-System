@@ -1,32 +1,33 @@
 .box{
-  width: 200px;
-    
+  height: 100%;
+  padding: 15px;
+  display: block;
+  box-shadow: 1px 1px 15px rgb(80, 79, 79);  
+  border-radius: 5px;
 }
 
 .box .img{    
     width: 200px;
-    display: block;
-   border-radius: 50%;
-    border: 1px solid #000;
+  
+   
 }
 
 .boxes{
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
 }
 
-.boxes:nth-child(3){
+.box:nth-child(2){
     margin-top: 55px;
 }
 
 
 .box .learnMore{
     cursor: pointer;
-    color: yellowgreen;
+    color: rgb(151, 212, 29);
     padding: 5px;
     text-align: center;
-    border: 1px solid #9D60EB;
-    border-radius: 5px;
+ 
 }
