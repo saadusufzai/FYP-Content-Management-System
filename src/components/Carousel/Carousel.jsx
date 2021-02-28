@@ -17,10 +17,11 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     draggable: true,
+    overflow:false,
     className: "slider",
   };
   return (
-    <Slider {...settings}>
+    <Slider  {...settings}>
       <div>
        <Intro  heading={'Welcome to Environmental Protection Organization'}/>
         <img className={classes.imgs} src={img1} alt="epo=intro" />

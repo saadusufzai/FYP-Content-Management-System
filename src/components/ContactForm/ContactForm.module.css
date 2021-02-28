@@ -1,0 +1,9 @@
+.form .contactForm{
+    width: 770px;
+    height: 650px;
+    box-shadow: 0px 1px 15px rgba(151, 151, 151, 0.404);
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+}
+
