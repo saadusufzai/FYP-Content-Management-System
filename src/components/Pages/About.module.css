@@ -1,0 +1,29 @@
+.container{
+    width: 90%;
+    margin: 2em auto;
+   
+    
+}
+
+.contentBox{
+    margin-top: 3em;
+     box-shadow: 3px 3px 15px rgba(151, 151, 151, 0.815);
+     padding: 10px;
+     border-radius: 5px;
+}
+.contentBox .paragraph{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.logo img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+ .contentBox ul{
+    margin-left: 2em;
+}
+.contentBox ul li{
+    margin-bottom: 15px;
+}
