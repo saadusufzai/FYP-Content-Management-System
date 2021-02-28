@@ -19,7 +19,7 @@ const Media = () => {
   };
   return (
     <div style={{width:'90%', margin:'0 auto'}} className={classes.media}>
-        <Typography variant={'h4'} align="center" >Gallery</Typography>
+        <Typography variant={'h3'} align="center" >Gallery</Typography>
       <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (

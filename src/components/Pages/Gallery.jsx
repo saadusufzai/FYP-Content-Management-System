@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Media from '../Gallery/Media'
 const Gallery = () => {
     return (
         <div>
-            Gallery Page 
+            <Media/>
         </div>
     )
 }

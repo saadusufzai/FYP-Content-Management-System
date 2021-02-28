@@ -1,6 +1,21 @@
-.form .contactForm{
+ .text{
+    margin: 20px 0;
+}
+ .row {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    margin-bottom: 3em;
+}
+.MuiTextField-root{
+    margin: 5px;
+}
+ .contactForm{
     width: 770px;
-    height: 650px;
+    height: 600px;
     box-shadow: 0px 1px 15px rgba(151, 151, 151, 0.404);
     margin: 0 auto;
     padding: 3em;
