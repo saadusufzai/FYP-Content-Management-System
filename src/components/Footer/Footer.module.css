@@ -46,10 +46,15 @@
   }
 
 .socialIcon{
+    cursor: pointer;
     margin-right: 25px;
     color: #1d61f5;
-    
 }  
+
+.socialIcon:hover{
+    opacity: 0.8;
+}
+
   .innerFooter .contact li{
       padding-bottom:10px;
       
@@ -58,4 +63,22 @@
    
     color: plum;
     font-weight: 800;
+}
+/* copyright area */
+
+.footer .copyright{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: linear-gradient(170deg,#FFF,#cae7ff);
+}
+
+.footer .copyright img{
+   width: 250px;
+   height: 200px;
+}
+.footer .copyright .text{
+    
+    font-size: 10px;
+    color: rgba(73, 72, 72, 0.76);
 }

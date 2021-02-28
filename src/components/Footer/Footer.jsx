@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./Footer.module.css";
 
 import logo from '../../images/logo.jpg';
+import right from '../../images/footer/1.png'
+import left from '../../images/footer/2.png'
 
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
@@ -59,7 +61,10 @@ const Footer = () => {
         </ul>
       </div>
       <div className={classes.copyright}>
-          <div className={classes.text}>Copyright &copy;2020-2021 | All rights reserved by www.epo.org.pk</div>
+         <img src={left} alt="epo man with tree"/>
+          <h2 className={classes.text}>Copyright &copy;2020-2021 | All rights reserved by www.epo.org.pk</h2>
+         <img src={right} alt="epo man with tree"/>
+
       </div>
     </div>
   );
