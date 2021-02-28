@@ -3,6 +3,7 @@ import Carousel from '../Carousel/Carousel'
 import Blogs from '../Blogs/Blogs'
 import Media from '../Gallery/Media'
 import Team from '../Team/Team'
+import ContactForm from '../ContactForm/ContactForm'
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
             <Blogs/>
             <Media/>
             <Team/>
-   
+            <ContactForm showText={true}/>
         </div>
     )
 }

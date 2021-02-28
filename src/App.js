@@ -9,6 +9,7 @@ import Donate from './components/Pages/Donate';
 import Gallery from './components/Pages/Gallery';
 import Home from './components/Pages/Home';
 import Footer from './components/Footer/Footer' 
+import ContactForm from './components/ContactForm/ContactForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/donate' element={<Donate/>} />
         </Routes>
+
         <Footer/>
     </Router>
   )}

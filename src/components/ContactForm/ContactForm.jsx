@@ -1,36 +1,35 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import Button from '../Button/Button'
+import Button from "@material-ui/core/Button";
 import classes from "./ContactForm.module.css";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from '@material-ui/core/styles';
+import img1 from "../../images/form/1.png";
+import img2 from "../../images/form/2.png";
+import img3 from "../../images/form/3.png";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      
-    },
-  },
-}));
-
-const ContactForm = () => {
-    const style = useStyles()
+const ContactForm = ({ showText }) => {
   return (
-    <div className={style.root}>
-      <div className={classes.text}>
-        <Typography variant="h4" align="center">
-          Facing Problem?
+    <div className={classes.form}>
+      {showText ? (
+        <div className={classes.text}>
+          <Typography variant="h4" align="center">
+            Facing Problem?
+          </Typography>
+          <Typography variant="h4" align="center">
+            Lets Get In Touch Now
+          </Typography>
+        </div>
+      ) : (
+        <Typography variant="h3" align="center">
+          Contact Us
         </Typography>
-        <Typography variant="h4" align="center">
-          Lets Get In Touch Now
-        </Typography>
-      </div>
-
+      )}
       {/* form */}
+
       <div className={classes.contactForm}>
         <div className={classes.row}>
           <TextField
+            style={{ marginRight: "10px" }}
             fullWidth
             label="First Name"
             placeholder="First Name"
@@ -47,7 +46,6 @@ const ContactForm = () => {
         </div>
         <div className={classes.row}>
           <TextField
-          
             label="Your Email Adress"
             placeholder="youremail@expample.com"
             multiline
@@ -60,10 +58,16 @@ const ContactForm = () => {
             label="Type Your Messege Here"
             placeholder="Write Here..."
             multiline
-            
           />
         </div>
-        <Button link={'#'} text={'Send'}/>
+        <Button className={classes.btn} variant="outlined" color="primary">
+          Send
+        </Button>
+        <div className={classes.bgImages}>
+          <img className={classes.imgLeft} src={img3} alt="epo" />
+          <img className={classes.imgRight1} src={img2} alt="epo" />
+          <img className={classes.imgRight2} src={img1} alt="epo" />
+        </div>
       </div>
     </div>
   );
