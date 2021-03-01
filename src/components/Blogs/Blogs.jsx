@@ -1,7 +1,8 @@
-import styles from "./Blogs.module.css";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Cards from './Cards'
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   blogs: {
-    
+    marginTop: theme.spacing(2),
   },
 }));
 
@@ -23,7 +24,7 @@ const Blogs = () => {
   const classes = useStyles();
   return (
     <div className={classes.blogs}>
-      <h1 style={{textAlign: 'center',marginTop:'.5em'}} >BLOGS</h1>
+      <Typography variant="h3" align="center" gutterBottom >BLOGS</Typography>
       
       <div className={classes.root}>
         <Grid container spacing={3}>
