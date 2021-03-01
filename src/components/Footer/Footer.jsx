@@ -42,7 +42,7 @@ const Footer = () => {
         </ul>
         {/* Social Contacts */}
         <ul className={classes.feild}>
-          <h5>Contact Us</h5>
+          <h5>Social Sites</h5>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Twitter</a></li>
           <li><a href="#">YouTube</a></li>

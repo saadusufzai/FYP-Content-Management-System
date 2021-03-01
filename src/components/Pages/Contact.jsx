@@ -4,7 +4,7 @@ import ContactForm from '../ContactForm/ContactForm'
 const Contact = () => {
     return (
         <div>
-            <ContactForm/>
+            <ContactForm showText={false}/>
         </div>
     )
 }
