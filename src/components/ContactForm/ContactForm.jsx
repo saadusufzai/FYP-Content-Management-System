@@ -15,9 +15,9 @@ const ContactForm = ({ showText }) => {
   const [messages,setMessage] = useState();
   const [data, setData] = useState();
   
-  const handelSubmit = ()=>{
+  const handelSubmit = (e)=>{
 
-   
+    e.preventDefault();
 
     // Request body
     const message = JSON.stringify({
@@ -67,7 +67,7 @@ const ContactForm = ({ showText }) => {
       )}
       {/* form */}
 
-      <div className={classes.contactForm}>
+      <form onsubmit={handelSubmit} className={classes.contactForm}>
         <div className={classes.row}>
           <TextField
             style={{ marginRight: "10px" }}
@@ -113,7 +113,7 @@ const ContactForm = ({ showText }) => {
           <img className={classes.imgRight1} src={img2} alt="epo" />
           <img className={classes.imgRight2} src={img1} alt="epo" />
         </div>
-      </div>
+      </form>
     </div>
   );
 };

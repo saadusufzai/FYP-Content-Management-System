@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
   const classes = useStyles();
 
-  const [firstName,setFistName] = useState('');
-  const [lastName,setLastNme] = useState('')
+  const [firstName,setFirstName] = useState('');
+  const [lastName,setLastName] = useState('')
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
 
@@ -82,6 +82,7 @@ export default function SignUp() {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={(e)=>setFirstName(e.target.value)}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -93,6 +94,7 @@ export default function SignUp() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                onChange={(e)=>setLastName(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -104,6 +106,7 @@ export default function SignUp() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -116,6 +119,7 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={(e)=>setPassword(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
