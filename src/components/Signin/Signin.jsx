@@ -12,6 +12,23 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import axios from 'axios';
+
+export const tokenconfig = (token) => {
+  // const token = getState().auth.token;
+
+  const config = {
+    headers: {
+      "content-type": "application/json",
+    },
+  };
+
+  // if token, add to header
+  if (token) {
+    config.headers["x-auth-token"] = token;
+  }
+  return config;
+};
 
 function Copyright() {
   return (
@@ -50,15 +67,40 @@ export default function SignIn() {
   
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
+  const [user, setUser] = useState('');
+  const [open, setOpen] = useState(true);
 
   const submit = (e)=>{
     e.preventDefault();
-    console.log(email,password);
+    let data = JSON.stringify({
+      email,
+      password,
+    });
+    
+    // Headers
+    const config = tokenconfig(localStorage.getItem('token'))
+
+    axios
+      .post("http://localhost:5000/api/user/login", data, config)
+      .then((res) => {
+        // alert.success("You Have Been Logged In");
+
+        localStorage.setItem("token", res.data.token);
+        setUser(res.data.user);
+        console.log(res);
+        setOpen(false)
+      })
+      .catch((err) => {
+        console.log(err);
+        // alert.error("Invalid credentials");
+      });
   }
 
   const classes = useStyles();
 
   return (
+    <>
+    {open? (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -124,6 +166,10 @@ export default function SignIn() {
       <Box mt={8}>
         <Copyright />
       </Box>
-    </Container>
+    </Container>) :
+    (<h2>Looged in Successfully</h2>)
+    }
+
+    </>
   );
 }

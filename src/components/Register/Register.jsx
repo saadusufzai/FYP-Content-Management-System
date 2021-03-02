@@ -12,6 +12,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios'
+
 
 function Copyright() {
   return (
@@ -47,21 +50,51 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const classes = useStyles();
 
   const [firstName,setFirstName] = useState('');
   const [lastName,setLastName] = useState('')
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
+  const [data,setData] = useState('');
+  const [open, setOpen] = useState(true);
+  const [name, setName] = useState('');
+  const handleSubmit = (e)=>{
+    e.preventDefault();
 
-  const handelSubmit = ()=>{
-    
-  }
+    // Request body
+    const user = JSON.stringify({ 
+      firstName,
+      lastName,
+      email,
+      password,
+    });
 
+     // Headers
+     const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
 
-
+    axios
+      .post("http://localhost:5000/api/user/register", user, config)
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+        // alert.success("Thank you! Your Squad is Registered!");
+        setName(res.data.user.name)
+        setOpen(false)
+      })
+      .catch((err) => console.log(err));
+  };
+  
   return (
-    <Container component="main" maxWidth="xs">
+   <>
+   {open ? 
+   (<Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -70,7 +103,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form  onSubmit={handleSubmit} className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -150,6 +183,7 @@ export default function SignUp() {
       <Box mt={5}>
         <Copyright />
       </Box>
-    </Container>
+    </Container>) : (<h1>THANKS {name} FOR REGISTRATION</h1>)}
+  </>
   );
 }

@@ -12,38 +12,39 @@ const ContactForm = ({ showText }) => {
   const [firstName,setFirstName] = useState();
   const [lastName,setLastName] = useState();
   const [email,setEmail] = useState();
-  const [messages,setMessage] = useState();
-  const [data, setData] = useState();
+  const [message,setMessage] = useState();
+  const [datas, setData] = useState();
+  const [open, setOpen] = useState(true);
   
   const handelSubmit = (e)=>{
 
     e.preventDefault();
 
     // Request body
-    const message = JSON.stringify({
+    const data = JSON.stringify({
       firstName,
       lastName,
       email,
-      messages
+      message
     });
 
-    // Headers
     const config = {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     };
-    // 
+
     axios
-      .post("http://localhost:5000/api/contact", message, config)
+      .post("http://localhost:5000/api/contact", data, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
-        alert.success("Thank you! Your Squad is Registered!");
-        
+        setOpen(false)
+        // alert.success("Thank you! Your Squad is Registered!");
+       
       })
-      .catch((err) => console.log("Error sada",err));
+      .catch((err) => console.log(err));
   };
 
   
@@ -66,8 +67,8 @@ const ContactForm = ({ showText }) => {
         </Typography>
       )}
       {/* form */}
-
-      <form onsubmit={handelSubmit} className={classes.contactForm}>
+        {open? (
+      <form onSubmit={handelSubmit} className={classes.contactForm}>
         <div className={classes.row}>
           <TextField
             style={{ marginRight: "10px" }}
@@ -113,7 +114,7 @@ const ContactForm = ({ showText }) => {
           <img className={classes.imgRight1} src={img2} alt="epo" />
           <img className={classes.imgRight2} src={img1} alt="epo" />
         </div>
-      </form>
+      </form>): (<h2 style={{textAlign:'center'}}>Thank You for submitting your message </h2>)}
     </div>
   );
 };

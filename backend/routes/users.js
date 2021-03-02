@@ -9,7 +9,7 @@ const router = Router.Router();
 
 const  JWT_SECRET  = process.env.JWT_SECRET
 /**
- * @route   POST api/users/register
+ * @route   POST api/user/register
  * @desc    Register new user
  * @access  Public
  */
@@ -69,7 +69,7 @@ router.post("/register", async (req, res) => {
 
 
   /**
- * @route   POST api/users/login
+ * @route   POST api/user/login
  * @desc    Login  user
  * @access  Public
  */
@@ -84,7 +84,7 @@ router.post("/login", async (req, res) => {
   
     try {
       // Check exisitng User
-      const user = await Squad.findOne({ email });
+      const user = await User.findOne({ email });
       if (!user) throw Error("User does not exist");
   
       const isMatch = await bcrypt.compare(password, user.password);
