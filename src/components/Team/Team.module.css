@@ -1,9 +1,13 @@
+
+
+
 .box{
+    max-width: 230px;
   height: 100%;
   padding: 15px;
   display: block;
   
-  box-shadow: 0px 1px 15px rgba(151, 151, 151, 0.404);
+  box-shadow: 0px 1px 15px rgb(92, 92, 92);
   border-radius: 5px;
 }
 
@@ -12,6 +16,18 @@
   
    
 }
+
+/* Expand */
+
+.expand {
+    transform: rotate(0deg);
+    margin-left: auto;
+     
+  }
+  
+  .expandOpen{
+       transform: rotate(180deg);
+  }
 
 .boxes{
     width: 80%;
@@ -28,8 +44,8 @@
 
 .box .learnMore{
     cursor: pointer;
-    color: rgb(151, 212, 29);
+    color: rgb(141, 59, 235);
     padding: 5px;
-    text-align: center;
+    margin-left: 15px;
  
 }
