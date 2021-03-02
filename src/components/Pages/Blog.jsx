@@ -1,12 +1,25 @@
-import Blogs from '../Blogs/Blogs'
-import ContactForm from '../ContactForm/ContactForm'
-const Blog = () => {
-    return (
-        <div className="blog">
-          <Blogs/>
-          <ContactForm showText={true}/>
-        </div>
-    )
-}
+import Blogs from "../Blogs/Blogs";
+import ContactForm from "../ContactForm/ContactForm";
+import Register from "../Register/Register";
+import Signin from "../Signin/Signin"
+import Popup from "../Popup/Popup";
 
-export default Blog
+import classes from "./Blog.module.css";
+
+const Blog = () => {
+  return (
+    <div className={classes.blog}>
+      <div className={classes.btn}>
+        <Popup title='Sign in' component={<Signin/>} />
+        <Popup title='Register' component={<Register/>} />
+      </div>
+      <div>
+        <Blogs />
+      </div>
+
+      <ContactForm showText={true} />
+    </div>
+  );
+};
+
+export default Blog;

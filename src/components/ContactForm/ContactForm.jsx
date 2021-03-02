@@ -15,9 +15,9 @@ const ContactForm = ({ showText }) => {
   const [messages,setMessage] = useState();
   const [data, setData] = useState();
   
-  const handelSubmit = (e)=>{
+  const handelSubmit = ()=>{
 
-    e.preventDefault();
+   
 
     // Request body
     const message = JSON.stringify({
@@ -41,11 +41,9 @@ const ContactForm = ({ showText }) => {
         setData(res.data);
         console.log(res.data);
         alert.success("Thank you! Your Squad is Registered!");
-        setTimeout(() => {
-          window.location = "/";
-        }, 2000);
+        
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("Error sada",err));
   };
 
   
@@ -107,7 +105,7 @@ const ContactForm = ({ showText }) => {
             onChange={(e)=>setMessage(e.target.value)}
           />
         </div>
-        <Button onClick={(e)=>handelSubmit(e)} className={classes.btn} variant="outlined" color="primary">
+        <Button type='submit' onClick={handelSubmit} className={classes.btn} variant="outlined" color="primary">
           Send
         </Button>
         <div className={classes.bgImages}>
