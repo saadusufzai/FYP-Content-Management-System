@@ -93,6 +93,8 @@ const ContactForm = ({ showText }) => {
             label="Your Email Adress"
             placeholder="youremail@expample.com"
             multiline
+            type="email"
+            
             fullWidth
             onChange={(e)=>setEmail(e.target.value)}
           />
@@ -114,7 +116,7 @@ const ContactForm = ({ showText }) => {
           <img className={classes.imgRight1} src={img2} alt="epo" />
           <img className={classes.imgRight2} src={img1} alt="epo" />
         </div>
-      </form>): (<h2 style={{textAlign:'center'}}>Thank You for submitting your message </h2>)}
+      </form>): (<h2 style={{textAlign:'center'}}>Thank You {firstName} for submitting your message </h2>)}
     </div>
   );
 };
