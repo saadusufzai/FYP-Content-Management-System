@@ -14,3 +14,7 @@
     Link : https://cms-fyp.netlify.app/
 
 ## Backend
+    MongoDB Atlas
+    Express
+    Node
+    
