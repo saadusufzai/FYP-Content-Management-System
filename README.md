@@ -18,5 +18,5 @@
     Express
     Node
 ## Admin
-   
+    Strapi JS
     
