@@ -19,4 +19,9 @@
     Node
 ## Admin
     Strapi JS
+   
+   ### Components
+        Blogs
+        Users
+        Admins
     
