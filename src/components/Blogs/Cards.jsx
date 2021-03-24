@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import img from '../../images/carousel/img1.jpg';
+import ReactMarkdown from 'react-markdown'
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
  
 });
 
-export default function Cards() {
+export default function Cards({title,description,thumbnails}) {
   const classes = useStyles();
 
   return (
@@ -25,15 +26,17 @@ export default function Cards() {
           component="img"
           alt="environment-blog"
           height="200"
-          image={img}
+          image={`http://localhost:1337`+thumbnails}
           title="Environment Blog"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h5">
-            Environment Blog
+            <ReactMarkdown source={title} />
+            
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           This is a blog about the environment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates exercitationem porro possim
+          <ReactMarkdown source={description} />
+           
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -13,6 +13,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-images": "1.1.7",
+    "react-markdown": "^5.0.3",
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.1",
