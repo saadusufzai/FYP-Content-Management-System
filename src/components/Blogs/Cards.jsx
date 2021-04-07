@@ -11,7 +11,7 @@ import img from '../../images/carousel/img1.jpg';
 import ReactMarkdown from 'react-markdown'
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    padding:0
   },
  
 });
@@ -20,7 +20,7 @@ export default function Cards({title,description,thumbnails}) {
   const classes = useStyles();
   const url = "https://epo-api.herokuapp.com"
   return (
-    <Card className={classes.root}>
+    <Card style={{height:'100%'}} className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -29,13 +29,13 @@ export default function Cards({title,description,thumbnails}) {
           image={`${url}`+thumbnails}
           title="Environment Blog"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h5">
+        <CardContent style={{padding:'0',textJustify:'inter-word'}}>
+          <Typography gutterBottom variant="h6" component="h5">
             <ReactMarkdown source={title} />
             
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          <ReactMarkdown source={description} />
+          <Typography variant="body2" style={{textJustify:'inter-word'}} color="textSecondary" component="p">
+          <ReactMarkdown style={{textJustify:'inter-word'}} source={description} />
            
           </Typography>
         </CardContent>

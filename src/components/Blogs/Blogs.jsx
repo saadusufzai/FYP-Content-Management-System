@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Cards from "./Cards";
 import { Typography } from "@material-ui/core";
 import axios from "axios";
+import styles from './Blogs.module.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     margin: "0 auto",
   },
-  paper: {
+  card: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
@@ -19,13 +20,17 @@ const useStyles = makeStyles((theme) => ({
   blogs: {
     marginTop: theme.spacing(2),
   },
+  loader:{ 
+    color:'red',
+    fontSize:'25'
+  }
 }));
 
-const url = "https://epo-api.herokuapp.com"
+  const url = "https://epo-api.herokuapp.com"
 
 const Blogs = () => {
   
-  const [data, setData] = React.useState();
+  const [data, setData] = React.useState();     
   React.useEffect(() => {
     axios
       .get(`${url}/blogs`)
@@ -43,6 +48,9 @@ const Blogs = () => {
   
 
   const classes = useStyles();
+
+ 
+
   return (
     <div className={classes.blogs}>
       <Typography variant="h3" align="center" gutterBottom>
@@ -51,12 +59,12 @@ const Blogs = () => {
 
       <div className={classes.root}>
         <Grid container spacing={3}>
-           {data?.map((blog, i)=>
-          <Grid item xs={12} sm={6} md={4}>
+           {data? data.map((blog, i)=>
+          <Grid  item xs={12} sm={6} md={4}>
             {" "}
               <Cards dangerouslySetInnerHTML={createMarkup()} index={i} title={blog.Title} description={blog.Intro} thumbnails={blog.FeaturedImage.formats.thumbnail.url} />
           </Grid>
-           )} 
+           ):<div className={styles.loader} >Loading Blogs...</div>} 
         </Grid>
       </div>
     </div>
