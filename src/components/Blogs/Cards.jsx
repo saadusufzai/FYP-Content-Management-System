@@ -8,32 +8,35 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import img from '../../images/carousel/img1.jpg';
+import ReactMarkdown from 'react-markdown'
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    padding:0
   },
  
 });
 
-export default function Cards() {
+export default function Cards({title,description,thumbnails}) {
   const classes = useStyles();
-
+  const url = "https://epo-api.herokuapp.com"
   return (
-    <Card className={classes.root}>
+    <Card style={{height:'100%'}} className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
           alt="environment-blog"
           height="200"
-          image={img}
+          image={`${url}`+thumbnails}
           title="Environment Blog"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h5">
-            Environment Blog
+        <CardContent style={{padding:'0',textJustify:'inter-word'}}>
+          <Typography gutterBottom variant="h6" component="h5">
+            <ReactMarkdown source={title} />
+            
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           This is a blog about the environment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates exercitationem porro possim
+          <Typography variant="body2" style={{textJustify:'inter-word'}} color="textSecondary" component="p">
+          <ReactMarkdown style={{textJustify:'inter-word'}} source={description} />
+           
           </Typography>
         </CardContent>
       </CardActionArea>
