@@ -101,6 +101,7 @@ const About = () => {
         </Typography>
         <ul className={classes.values}>
             <li>Protect the Nature</li>
+            <li>Trees For Life</li>
             <li>Prevent The Blindness</li>
             <li>Community Empowerment</li>
             <li>Gender Justice</li>
