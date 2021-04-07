@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 export default function Cards({title,description,thumbnails}) {
   const classes = useStyles();
-
+  const url = "https://epo-api.herokuapp.com"
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -26,7 +26,7 @@ export default function Cards({title,description,thumbnails}) {
           component="img"
           alt="environment-blog"
           height="200"
-          image={`http://localhost:1337`+thumbnails}
+          image={`${url}`+thumbnails}
           title="Environment Blog"
         />
         <CardContent>

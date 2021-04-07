@@ -21,12 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const url = "https://epo-api.herokuapp.com"
+
 const Blogs = () => {
   
   const [data, setData] = React.useState();
   React.useEffect(() => {
     axios
-      .get("http://localhost:1337/blogs")
+      .get(`${url}/blogs`)
       .then((response) => {
         setData(response.data);
       })
