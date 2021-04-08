@@ -24,7 +24,7 @@ app.use('/api/user', userRouter)
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to ESports Global API.",
+    message: "Welcome to epo.org.pk APIs.",
     developer: "Saad Aslam",
     links: {
       github_Link: "https://github.com/saadusufzai",
