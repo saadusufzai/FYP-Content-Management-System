@@ -1,13 +1,17 @@
 .slider{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .imgs{
     margin: 0 auto;
 }
+img.imgs{
+    width:100%;
+   
+}
 .intro{
     text-align: center;
     margin-top: 20px;
-    
+    margin-bottom: 2em;
 }
 .intro p{
     font-size: 12px;
