@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import classes from "./Carousel.module.css";
 
 
-import img1 from "../../images/carousel/img1.jpg";
+import img1 from "../../images/carousel/wed1.jpg";
+import img2 from "../../images/carousel/wed3.jpg";
+import img3 from "../../images/carousel/wed2.jpg";
 import Intro from "./Intro";
 
 const Carousel = () => {
@@ -28,11 +30,11 @@ const Carousel = () => {
       </div>
       <div>
       <Intro/>
-        <img className={classes.imgs} src={img1} alt="epo=intro" />
+        <img className={classes.imgs} src={img2} alt="epo=intro" />
       </div>
       <div>
       <Intro/>
-        <img className={classes.imgs} src={img1} alt="epo=intro" />
+        <img className={classes.imgs} src={img3} alt="epo=intro" />
       </div>
     </Slider>
   );
