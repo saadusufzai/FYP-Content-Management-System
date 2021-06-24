@@ -22,13 +22,13 @@ export default function Cards({title,description,thumbnails}) {
   return (
     <Card style={{height:'100%'}} className={classes.root}>
       <CardActionArea>
-        <CardMedia
+        {/* <CardMedia
           component="img"
           alt="environment-blog"
           height="200"
           image={`${url}`+thumbnails}
           title="Environment Blog"
-        />
+        /> */}
         <CardContent style={{padding:'0',textJustify:'inter-word'}}>
           <Typography gutterBottom variant="h6" component="h5">
             <ReactMarkdown source={title} />
