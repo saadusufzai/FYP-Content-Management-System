@@ -15,7 +15,7 @@ const Header = ()=> {
             </div>
             <div>
           
-                <ul style={{transform:`${burger?"translateX(-50px)":"translateX(-280px)" }`}} className={classes.nav}>
+                <ul style={{transform:`${burger?"translateX(-50px)":"" }`}} className={classes.nav}>
                
                 <i onClick={()=>setBurger(!burger)} style={{left:'11em',top:'.5em'}} className="fa fa-times" aria-hidden="true"></i>
                     <li><Link to="/">Home</Link></li>

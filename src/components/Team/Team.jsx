@@ -44,7 +44,7 @@ const Team = () => {
           <Typography variant="body1" align="center">
             CEO
           </Typography>
-          <CardActions disableSpacing>
+          <CardActions >
             <span className={classes.learnMore}> Learn More</span>
             <IconButton
               className={clsx(classes.expand, {

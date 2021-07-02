@@ -1,5 +1,5 @@
 .header{
-    width: 100%;
+  width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,11 +7,22 @@
 }
 
 .header i {
+    cursor: pointer;
     display:none;
   color: #000;
 }
 
+/* slider */
+
+
+
+/* slider */
+
+
+
+
 .nav{
+    width: auto;
     display: flex;
     margin-right: 5em;
     align-items: center;
@@ -64,7 +75,7 @@ img.logo {
 
     .header .nav  i{
         display:block;
-        color: rgb(255, 0, 0);
+        color: rgb(0, 0, 0);
         position: absolute;
       
         top: 1em;
@@ -78,7 +89,9 @@ img.logo {
         height:150px;
     }
 
-    .nav{ display: block;
+    .nav{
+        
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
@@ -128,3 +141,4 @@ img.logo {
         color: #fff;
     }
 }
+
