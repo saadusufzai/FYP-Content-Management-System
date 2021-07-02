@@ -62,7 +62,7 @@ const Blogs = () => {
            {data? data.map((blog, i)=>
           <Grid  item xs={12} sm={6} md={4}>
             {" "}
-              <Cards dangerouslySetInnerHTML={createMarkup()} index={i} title={blog.Title} description={blog.Intro} thumbnails={blog.FeaturedImage.formats.thumbnail.url} />
+              <Cards dangerouslySetInnerHTML={createMarkup()} index={i} title={blog.Title} description={blog.Intro}  />
           </Grid>
            ):<div className={styles.loader} >Loading Blogs...</div>} 
         </Grid>

@@ -3,10 +3,13 @@ import React,{useState} from "react";
 import Button from "@material-ui/core/Button";
 import classes from "./ContactForm.module.css";
 import TextField from "@material-ui/core/TextField";
+import Input from '@material-ui/core/Input';
 import img1 from "../../images/form/1.png";
 import img2 from "../../images/form/2.png";
 import img3 from "../../images/form/3.png";
 import axios from 'axios'
+import { toast } from 'react-toastify';
+
 
 const ContactForm = ({ showText }) => {
   const [firstName,setFirstName] = useState();
@@ -15,7 +18,6 @@ const ContactForm = ({ showText }) => {
   const [message,setMessage] = useState();
   const [datas, setData] = useState();
   const [open, setOpen] = useState(true);
-  
   const handelSubmit = (e)=>{
 
     e.preventDefault();
@@ -42,9 +44,19 @@ const ContactForm = ({ showText }) => {
         console.log(res.data);
         setOpen(false)
         // alert.success("Thank you! Your Squad is Registered!");
-       
+        toast.success("Message Sumbitted")
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        toast.error(err.response.data.msg, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        console.log(err.response.data.msg)});
   };
 
   
@@ -73,6 +85,7 @@ const ContactForm = ({ showText }) => {
           <TextField
             style={{ marginRight: "10px" }}
             fullWidth
+            required
             label="First Name"
             placeholder="First Name"
             multiline
@@ -89,12 +102,13 @@ const ContactForm = ({ showText }) => {
           />
         </div>
         <div className={classes.row}>
-          <TextField
+          <Input
             label="Your Email Adress"
             placeholder="youremail@expample.com"
             multiline
             type="email"
-            
+            required
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
             fullWidth
             onChange={(e)=>setEmail(e.target.value)}
           />

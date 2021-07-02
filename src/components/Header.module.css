@@ -1,9 +1,16 @@
 .header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     user-select:none;
 }
+
+.header i {
+    display:none;
+  color: #000;
+}
+
 .nav{
     display: flex;
     margin-right: 5em;
@@ -37,4 +44,87 @@ img.logo {
     padding: 10px 15px;
     border-radius: 5px;
     color: #fff;
+}
+
+@media only screen and (max-width: 600px)  {
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select:none;
+    }
+
+    .header i:first-child{
+        display: block;
+        position: absolute;
+        top: 20px ;
+        left: 20px;
+    }
+
+    .header .nav  i{
+        display:block;
+        color: rgb(255, 0, 0);
+        position: absolute;
+      
+        top: 1em;
+    }
+
+    .header .logo{
+        margin: auto
+    }
+    .header .logo img{
+        width:150px;
+        height:150px;
+    }
+
+    .nav{ display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #c4bcbc;
+        color: #756f6f;
+        width: 200px;
+        height: auto;
+        opacity: 0.9;
+        padding: 10px;
+        border-right: #ccc 1px solid;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+        z-index: 11;
+    }
+    ul.nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    
+
+    .nav li{
+        margin-bottom:1em;
+        margin-left:1em;
+    }
+    
+    .nav li a{
+        text-decoration: none;
+        color: black;
+    }
+    .nav li a:hover{
+        color: plum;
+    }
+    
+    img.logo {
+        height:80px;
+        padding: 15px;
+        margin-left:15px
+    }
+    
+    .btnAct{
+        background-color: #6362D7;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+    }
 }

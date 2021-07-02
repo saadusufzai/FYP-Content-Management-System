@@ -22,3 +22,35 @@
   display:inline-block;
   color: #9D60EB;
 }
+
+@media only screen and (max-width: 600px)  {
+
+  .btnAct {
+    background: rgb(98, 98, 215);
+    background: linear-gradient(
+      90deg,
+      rgba(98, 98, 215, 1) 0%,
+      rgba(255, 143, 226, 1) 100%
+    );
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 2em;
+    margin-bottom: .5em;
+    cursor: pointer;
+    display:inline-block;
+  }
+  
+  .btn2{
+    border: 1px solid #9D60EB;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 2em;
+    cursor: pointer;
+    display:inline-block;
+    color: #9D60EB;
+  }
+  
+}

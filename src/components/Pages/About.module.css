@@ -27,3 +27,50 @@
 .contentBox ul li{
     margin-bottom: 15px;
 }
+
+
+@media only screen and (max-width: 600px)  {
+    .container{
+        width: 90%;
+        margin: 1em auto;
+       
+        
+    }
+    
+    .container h2{
+        font-size: 22px;
+    }
+    .container h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .container h4{
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .contentBox{
+        margin-top: 3em;
+         box-shadow: 3px 3px 15px rgba(151, 151, 151, 0.815);
+         padding: 10px;
+         border-radius: 5px;
+    }
+    .contentBox .paragraph{
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .logo img{
+        display: block;
+        width: 40%;
+        margin: 2em auto;
+    }
+     .contentBox ul{
+        margin-left: 2em;
+    }
+    .contentBox ul li{
+        margin-bottom: 15px;
+    }
+    
+
+}

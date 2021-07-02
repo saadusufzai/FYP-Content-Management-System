@@ -17,6 +17,10 @@ router.post("/", async (req, res) => {
   if (!firstName || !email || !message) {
     return res.status(400).json({ msg: "Please enter all feilds" });
   }
+
+  try{
+
+
   const newContact = new Contact({
     firstName,
     lastName,
@@ -37,6 +41,11 @@ router.post("/", async (req, res) => {
       message: savedContact.message,
     },
   });
+
+}catch(err){
+  res.status(400).json({ error: err.message });
+}
+
 });
 
 

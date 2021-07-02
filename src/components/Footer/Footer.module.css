@@ -30,6 +30,10 @@
     
 }
 
+.footer .innerFooter .address{
+    width:30%
+}
+
 .footer .innerFooter  h5  {
     font-size: 14px;
     margin-bottom:15px;
@@ -60,8 +64,8 @@
       
   }
 .footer .innerFooter ul a:hover {
-   
-    color: plum;
+    
+    color: plum; 
     font-weight: 800;
 }
 /* copyright area */
@@ -81,4 +85,100 @@
     
     font-size: 10px;
     color: rgba(73, 72, 72, 0.76);
+}
+
+
+
+@media only screen and (max-width: 600px)  {
+
+    .innerFooter{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin:0 auto;
+        padding: 10px;
+    
+    }
+    .footer{
+        margin-top: 40px;
+    
+    }
+    
+    .footer img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+    }
+    
+    .footer .innerFooter ul  {
+        list-style-type: none;
+    }
+    .footer .innerFooter ul li  {
+        font-size: 12px;
+        margin-bottom:10px;
+        display:flex;
+        align-items: center;
+        color: rgb(53, 52, 52);
+        
+    }
+
+    .footer .innerFooter .address{
+        width:90%
+    }
+    
+    .footer .innerFooter  h5  {
+        font-size: 14px;
+        margin-bottom:15px;
+    }
+    
+    .footer .innerFooter ul a {
+        text-decoration: none;
+        color: rgb(53, 52, 52);
+    }
+    .contact .icon{
+        margin-right: 10px;
+        color: #9D60EB;
+        
+      }
+    
+    .socialIcon{
+        cursor: pointer;
+        margin-right: 25px;
+        color: #1d61f5;
+    }  
+    
+    .socialIcon:hover{
+        opacity: 0.8;
+    }
+    
+      .innerFooter .contact li{
+          padding-bottom:10px;
+          
+      }
+    .footer .innerFooter ul a:hover {
+       
+        color: plum;
+        font-weight: 800;
+    }
+    /* copyright area */
+    
+    .footer .copyright{
+        display:flex;
+        justify-content:space-between;
+        
+        align-items:center;
+        background: linear-gradient(170deg,#FFF,#cae7ff);
+    }
+    
+    .footer .copyright img{
+       width: 80px;
+       height: 00px;
+    }
+    .footer .copyright .text{
+        font-size: 10px;
+        color: rgba(73, 72, 72, 0.76);
+    }
+    
 }

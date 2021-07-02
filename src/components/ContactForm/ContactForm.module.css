@@ -50,3 +50,67 @@
     bottom: 0px; 
     right: -170px;
 }
+
+
+@media only screen and (max-width: 600px)  {
+  .text {
+    
+    margin: 10px 0;
+  }
+
+  .text h4{
+    font-size: 22px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .form {
+    width:auto;
+    background: linear-gradient(170deg, #fff, #cae7ff);
+    padding: 10px;
+    overflow: hidden;
+    margin: 2em 0;
+  }
+  
+  .form .btn{
+      margin-top: 6em;
+  }
+  .row {
+    margin-bottom: 3em;
+  }
+  
+  .contactForm {
+    background-color: rgb(216, 216, 216);
+    width: auto;
+    height: 600px;
+    box-shadow: 0px 1px 15px rgba(151, 151, 151, 0.404);
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .bgImages .imgLeft {
+      position: absolute;
+      bottom: 0px;
+      left: -150px;
+      width:200px;
+      
+  }
+  .bgImages .imgRight1 {
+      position: absolute;
+      width:150px;
+      bottom: 0px;
+      right: -120px;
+  }
+  .bgImages .imgRight2 {
+      position: absolute;
+      width:100px;
+      bottom: 0px; 
+      right: -170px;
+  }
+  
+}

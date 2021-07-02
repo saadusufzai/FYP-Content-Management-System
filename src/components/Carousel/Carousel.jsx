@@ -25,7 +25,7 @@ const Carousel = () => {
   return (
     <Slider  {...settings}>
       <div>
-       <Intro  heading={'Welcome to Environmental Protection Organization'}/>
+       <Intro  heading={'Welcome to EPO'}/>
         <img className={classes.imgs} src={img1} alt="epo=intro" />
       </div>
       <div>

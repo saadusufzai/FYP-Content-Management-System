@@ -10,7 +10,8 @@ import Gallery from './components/Pages/Gallery';
 import Home from './components/Pages/Home';
 import Footer from './components/Footer/Footer' 
 import ContactForm from './components/ContactForm/ContactForm';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <Router>
@@ -23,7 +24,7 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/donate' element={<Donate/>} />
         </Routes>
-
+        <ToastContainer />
         <Footer/>
     </Router>
   )}

@@ -50,7 +50,7 @@ const Footer = () => {
           <li><a href="#">Skype</a></li>
         </ul>
         {/* Address */}
-        <ul style={{ width:'30%'}} className={classes.feild}>
+        <ul   className={classes.address}>
           <h5>Address</h5>
           <li >
              Environmental Protection Organization (EPO) Office, 2nd Floor Nasir Hospital, Bhakkar, Punjab Pakistan</li>

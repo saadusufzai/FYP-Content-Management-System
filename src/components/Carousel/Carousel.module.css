@@ -1,5 +1,5 @@
 .slider{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .imgs{
     margin: 0 auto;
@@ -17,4 +17,32 @@ img.imgs{
     font-size: 12px;
     opacity: 0.8;
     margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 600px)  {
+
+    .slider{
+        overflow: hidden;
+    }
+    .imgs{
+        margin: 0 auto;
+    }
+    img.imgs{
+        width:100%;
+       
+    }
+    .intro{
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 2em;
+    }
+    .intro h1{
+        font-size: 22px;
+    }
+    .intro p{
+        font-size: 12px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
 }
