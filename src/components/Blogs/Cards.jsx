@@ -30,11 +30,11 @@ export default function Cards({title,description}) {
           title="Environment Blog"
         /> */}
         <CardContent style={{padding:'0',textJustify:'inter-word'}}>
-          <Typography gutterBottom variant="h6" component="h5">
+          <Typography gutterBottom variant="h6" component="h5" style={{padding:'5px'}}>
             <ReactMarkdown source={title} />
             
           </Typography>
-          <Typography variant="body2" style={{textJustify:'inter-word'}} color="textSecondary" component="p">
+          <Typography variant="body2" style={{textJustify:'inter-word',padding:"10px"}} color="textSecondary" component="p">
           <ReactMarkdown style={{textJustify:'inter-word'}} source={description} />
            
           </Typography>
