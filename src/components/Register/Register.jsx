@@ -81,7 +81,7 @@ export default function SignUp() {
     };
 
     axios
-      .post("http://localhost:5000/api/user/register", user, config)
+      .post("https://epo-backend.herokuapp.com/api/user/register", user, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);

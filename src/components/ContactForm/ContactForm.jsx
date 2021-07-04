@@ -38,7 +38,7 @@ const ContactForm = ({ showText }) => {
     };
 
     axios
-      .post("http://localhost:5000/api/contact", data, config)
+      .post("https://epo-backend.herokuapp.com/api/contact", data, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
