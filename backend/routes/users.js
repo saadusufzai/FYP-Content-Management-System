@@ -63,15 +63,18 @@ router.post("/register", async (req, res) => {
       if (!savedUser) throw Error("Something went wrong saving the user");
 
       transporter.sendMail({
-        to: `${req.to}`,
+        to: email,
         subject: "Registration For Writing Blogs",
         cc:`saadusufzai@gmail.com`,
-        text: `Dear ${req.body.user}\n
-        Thanks For registration on EPO Blogs.\n 
-        This is an automatically generated email
-        We will soon get back to you\n
+        text: `Dear ${firstName, lastName}\n
+        Thanks For registration on Environmental Protection Organization's Blogs.\n 
+        The registered email adderess is ${email}.
+        This is an automatically generated email. Plese do not reply to this email address.
+        We will soon get back to you
         \n
-        \n\n
+        \n
+        \n
+        \n
         Best Regards\n
         EPO Admin`,
       }).then(res=>{
