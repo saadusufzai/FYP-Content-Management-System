@@ -16,6 +16,7 @@
     "react-images": "1.1.7",
     "react-markdown": "^5.0.3",
     "react-photo-gallery": "^8.0.0",
+    "react-reveal": "^1.2.2",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.1",
     "react-slick": "^0.28.0",

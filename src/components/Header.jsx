@@ -3,10 +3,11 @@ import React,{ useState} from "react";
 import Switch from '@material-ui/core/Switch'
 import { Tooltip } from "@material-ui/core";
 
-import logo from '../images/logo.jpg'
+import logo from '../images/logo.png'
 import classes from './Header.module.css'
 import Button from './Button/Button'
 import {Link} from 'react-router-dom'
+
 const Header = ({darkMode, setDarkMode})=> {    
     let [burger,setBurger] = useState(false)
 

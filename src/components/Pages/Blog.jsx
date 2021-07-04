@@ -6,10 +6,11 @@ import Popup from "../Popup/Popup";
 
 import classes from "./Blog.module.css";
 import {Button2} from "../Button/Button";
+import Fade from 'react-reveal/Fade';
 
 const Blog = () => {
   return (
-    <div className={classes.blog}>
+    <Fade left className={classes.blog}>
       <div className={classes.btn}>
         <Popup title='Register' component={<Register/>} />
       </div>
@@ -18,7 +19,7 @@ const Blog = () => {
       </div>
 
       <ContactForm showText={true} />
-    </div>
+    </Fade>
   );
 };
 

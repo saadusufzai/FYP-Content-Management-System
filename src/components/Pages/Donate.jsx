@@ -5,11 +5,12 @@ import styles from "./Donate.module.css";
 import Grid from "@material-ui/core/Grid";
 
 import Product from "../Product/Product";
+import Fade from 'react-reveal/Fade';
 
 const Donate = () => {
   const data = [1];
   return (
-    <div>
+    <Fade left>
       <div className={styles.upper}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={8} className={styles.left}>
@@ -28,8 +29,8 @@ const Donate = () => {
         </Grid>
       </div>
 
-      <ContactForm showText={true} />
-    </div>
+     <Fade top> <ContactForm showText={true} /></Fade>
+    </Fade>
   );
 };
 

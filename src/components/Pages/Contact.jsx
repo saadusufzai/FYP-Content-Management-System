@@ -1,11 +1,12 @@
 import React from 'react'
 import ContactForm from '../ContactForm/ContactForm'
+import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
     return (
-        <div>
+        <Fade left>
             <ContactForm showText={false}/>
-        </div>
+        </Fade >
     )
 }
 

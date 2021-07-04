@@ -1,10 +1,13 @@
 import ContactForm from "../ContactForm/ContactForm";
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo.png";
 import classes from "./About.module.css";
 import { Grid, Typography } from "@material-ui/core";
+import Fade from 'react-reveal/Fade';
+
+
 const About = () => {
   return (
-    <div className={classes.container}>
+    <Fade left className={classes.container}>
       {/* Heading */}
       <div className={classes.heading}>
         <Typography variant="h2" component="h2" align="center">
@@ -111,7 +114,7 @@ const About = () => {
       </Grid>
 
       <ContactForm showText={true} />
-    </div>
+    </Fade>
   );
 };
 

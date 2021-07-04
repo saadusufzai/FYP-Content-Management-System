@@ -10,6 +10,7 @@ const router = Router.Router();
 const  JWT_SECRET  = process.env.JWT_SECRET
 
 const transporter = nodemailer.createTransport({
+  
   service: "Gmail",
   auth: {
     type: "OAuth2",
