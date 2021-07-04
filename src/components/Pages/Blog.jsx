@@ -5,12 +5,12 @@ import Signin from "../Signin/Signin"
 import Popup from "../Popup/Popup";
 
 import classes from "./Blog.module.css";
+import {Button2} from "../Button/Button";
 
 const Blog = () => {
   return (
     <div className={classes.blog}>
       <div className={classes.btn}>
-        <Popup title='Sign in' component={<Signin/>} />
         <Popup title='Register' component={<Register/>} />
       </div>
       <div>

@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios'
+import { toast } from 'react-toastify';
 
 
 function Copyright() {
@@ -84,11 +85,21 @@ export default function SignUp() {
       .then((res) => {
         setData(res.data);
         console.log(res.data);
-        // alert.success("Thank you! Your Squad is Registered!");
         setName(res.data.user.name)
         setOpen(false)
+        toast.success("User Registered. Kindly Check your email in 24Hrs")
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        toast.error(err.response.data.msg, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        console.log(err)});
   };
   
   return (
@@ -173,7 +184,7 @@ export default function SignUp() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="https://epo-api.herokuapp.com/admin" target='blank' variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>
@@ -183,7 +194,7 @@ export default function SignUp() {
       <Box mt={5}>
         <Copyright />
       </Box>
-    </Container>) : (<h1>THANKS {name} FOR REGISTRATION</h1>)}
+    </Container>) : (<h1 style={{padding:'10px'}}>THANKS <span style={{textTransform:'uppercase'}} >{name}</span> FOR REGISTRATION</h1>)}
   </>
   );
 }

@@ -3,9 +3,10 @@ import classes from './Button.module.css'
 
 import {useNavigate} from 'react-router-dom'
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, setBurger }) => {
   const navigate = useNavigate()
   const handelClick = ()=>{
+    setBurger(false)
     navigate(`${link}`)
 } 
   return (

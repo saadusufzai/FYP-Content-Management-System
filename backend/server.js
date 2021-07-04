@@ -18,9 +18,11 @@ const contactRouter = require("./routes/contact");
 const messageRouter = require("./routes/message");
 const userRouter = require("./routes/users");
 
+
 app.use("/api/contact", contactRouter);
 app.use('/api/message', messageRouter);
 app.use('/api/user', userRouter)
+
 
 app.get("/", (req, res) => {
   res.json({

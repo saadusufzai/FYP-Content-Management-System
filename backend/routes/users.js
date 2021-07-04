@@ -1,13 +1,28 @@
 const Router = require("express");
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
+const nodemailer = require("nodemailer");
 
 const User = require("../models/User.model")
 
 
 const router = Router.Router();
-
 const  JWT_SECRET  = process.env.JWT_SECRET
+
+const transporter = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    type: "OAuth2",
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    refreshToken: process.env.REFRESH_TOKEN,
+  },
+});
+
+
+
 /**
  * @route   POST api/user/register
  * @desc    Register new user
@@ -46,7 +61,24 @@ router.post("/register", async (req, res) => {
   
       const savedUser = await newUser.save();
       if (!savedUser) throw Error("Something went wrong saving the user");
-  
+
+      transporter.sendMail({
+        to: `${req.to}`,
+        subject: "Registration For Writing Blogs",
+        cc:`saadusufzai@gmail.com`,
+        text: `Dear ${req.body.user}\n
+        Thanks For registration on EPO Blogs.\n 
+        This is an automatically generated email
+        We will soon get back to you\n
+        \n
+        \n\n
+        Best Regards\n
+        EPO Admin`,
+      }).then(res=>{
+        console.log(res.messageId, 'Mail send')
+        
+      }).catch(err=>console.log(err));
+    
       const token = jwt.sign({ id: savedUser._id }, JWT_SECRET, {
         expiresIn: 3600,
       });

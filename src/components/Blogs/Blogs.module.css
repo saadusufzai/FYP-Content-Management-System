@@ -5,6 +5,18 @@
 
 }
 
+.blog .btn .signinbtn{
+  border: 1px solid #9D60EB;
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 2em;
+  cursor: pointer;
+  display:inline-block;
+  color: #9D60EB;
+}
+
+
 /* Loader */
 
 /* Loading */
