@@ -1,10 +1,13 @@
 import React,{ useState} from "react";
 
+import Switch from '@material-ui/core/Switch'
+import { Tooltip } from "@material-ui/core";
+
 import logo from '../images/logo.jpg'
 import classes from './Header.module.css'
 import Button from './Button/Button'
 import {Link} from 'react-router-dom'
-const Header = ()=> {    
+const Header = ({darkMode, setDarkMode})=> {    
     let [burger,setBurger] = useState(false)
 
     return(
@@ -29,6 +32,12 @@ const Header = ()=> {
                         
                 </ul>
             </div>
+            {/* <Tooltip title='Toggle Dark/Light Theme'>  
+          <Switch
+        checked={darkMode}
+        onChange={()=>setDarkMode(!darkMode)}
+        
+      /></Tooltip> */}
         </div>
 
     )

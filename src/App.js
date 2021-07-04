@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {useState} from 'react'
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import "./App.css";
 import Header from './components/Header'
@@ -13,9 +16,26 @@ import ContactForm from './components/ContactForm/ContactForm';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  const theme = createMuiTheme({
+    palette: {
+      type: darkMode ? "dark" : "light",
+      primary: {
+        main: "#000",
+      },
+      secondary: {
+        main: "#f44336",
+      },
+    },
+  });
   return (
     <Router>
-      <Header/>
+        <ThemeProvider theme={theme}>
+      <CssBaseline />
+
+      <Header setDarkMode={setDarkMode} darkMode={darkMode} />
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/about' element={<About/>} />
@@ -26,6 +46,7 @@ function App() {
         </Routes>
         <ToastContainer />
         <Footer/>
+        </ThemeProvider>
     </Router>
   )}
 

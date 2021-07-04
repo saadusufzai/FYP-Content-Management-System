@@ -43,7 +43,6 @@ const ContactForm = ({ showText }) => {
         setData(res.data);
         console.log(res.data);
         setOpen(false)
-        // alert.success("Thank you! Your Squad is Registered!");
         toast.success("Message Sumbitted")
       })
       .catch((err) => {
@@ -108,7 +107,7 @@ const ContactForm = ({ showText }) => {
             multiline
             type="email"
             required
-            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+           
             fullWidth
             onChange={(e)=>setEmail(e.target.value)}
           />
