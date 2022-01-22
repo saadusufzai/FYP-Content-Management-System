@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 import React from "react";
 import img1 from "../../images/team/1.jpg";
 import img2 from "../../images/team/2.jpg";
-import img3 from "../../images/team/3.jpg";
+import img3 from ".././../images/team/yasmin.jpeg";
 import Button from "../Button/Button";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -103,7 +103,7 @@ const Team = () => {
         <Card className={classes.box}>
           <img className={classes.img} src={img3} alt="team member 1" />
           <Typography variant="h6" align="center">
-            M.Saad Aslam
+          Muhammad Yasmin
           </Typography>
           <Typography variant="body1" align="center">
             S.V.P
